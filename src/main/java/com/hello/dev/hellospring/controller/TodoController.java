@@ -33,9 +33,6 @@ public class TodoController {
 
     @GetMapping("/todos")
     public List<TodoDTO> list() {
-        new TodoDTO.Builder().title("23423423").comYn(true).build();
-        return todoService.list(new TodoDTO.Builder()
-                .title("23423423")
-                .comYn(true).build());
+        return todoService.list(TodoDTO.builder().build());
     }
 }
